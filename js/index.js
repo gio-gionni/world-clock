@@ -24,6 +24,18 @@ function updateTime() {
       "hh:mm:ss [<small>]A[</small>]"
     );
   }
+  // Denpasar
+  let denpasarElement = document.querySelector("#denpasar");
+  if (losAngelesElement) {
+    let denpasarDateElement = denpasarElement.querySelector(".date");
+    let denpasarTimeElement = denpasarElement.querySelector(".time");
+    let denpasarTime = moment().tz("Asia/Singapore");
+
+    denpasarDateElement.innerHTML = denpasarTime.format("MMMM Do YYYY");
+    denpasarTimeElement.innerHTML = denpasarTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
